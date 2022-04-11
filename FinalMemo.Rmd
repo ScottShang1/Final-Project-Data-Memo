@@ -1,0 +1,43 @@
+---
+title: "FinalMemo"
+author: "Scott Shang (8458655)"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+---
+title: "Final Project Data Memo"
+author: "Scott Shang (8458655)"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: pdf_document
+---
+
+```{r setup, echo=FALSE}
+library(knitr)
+# set global chunk options: images will be 7x5 inches
+knitr::opts_chunk$set(fig.width=7, fig.height=5)
+options(digits = 4)
+
+
+## indents are for indenting r code as formatted text
+## They may need to be adjusted depending on your OS
+# if your output looks odd, increase or decrease indent
+indent1 = '    '
+indent2 = '        '
+indent3 = '            '
+```
+
+In the final project, I want to explore the relationship between the GDP per capita(constant) for the United States and others indices, including but not limited to GDP, Interest Rates, Discount Rate for United States, Consumer Price Index, Long-Term Government Bond Yields(10-year and 2-year), Inflation, M3, Household Debt to GDP(rate), Commercial Real Estate Prices, Employment Rates of different aged people.
+
+The data will be obtained mainly from U.S. Census Bureau(https://www.census.gov/) and Economic Research Federal Reserve Bank of ST.Louis(https://research.stlouisfed.org/). Data are easily accessible from their websites.
+
+My observations will be based on time period of month, from 1960 to 2021, so there will be approximately 732 observations. Predictors are the indices that we used to predict GDP. I will say around 15 predictors. I will mainly focus on numeric variable, but I might include a qualitative variable to indicate whether there was a huge recession. I was thinking about to include the date until 2022, but there was a huge number of data still unavailable, so I decide to just include the date until 2020. There will be no missing data.
+
+I'm interested in predicting GPD per capita of the US. GDP per capita is one of the most important indicator to tell the economic condition of a country. Hopefully, we can predict how the economy behave in the short time. Regression models are mostly needed. I will say all the predictors I mentioned above will be useful, but inflation, unemployment rate, and interest rate might be the most important. The goal of the model will be predictive.
+
+All the data could be colected within a few days once the project is approved by the instructor.
+
+First, I doubt whether predicting GDP per capita is 'useful', since all the information we have might be already out-dated. If our model is accurate, whether we can get 'fresh' data to predict GDP is a problem. Also, if I split the data based on months we will have only 732 obs, which may be not enough. However, if we split the data by shorter period of time, the data is potentially mitigated by seasonal factors. To be honest, I'm not very confident about this project.
